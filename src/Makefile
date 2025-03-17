@@ -15,8 +15,8 @@ C = gcc
 -IC:\SDL2_ttf-2.0.14\i686-w64-mingw32\include \
 -IC:\SDL2_image-2.0.3\i686-w64-mingw32\include \
 -Wall -c -std=c89 -m32 -march=i686
-#BIN1 = kiss_example1.exe
-#BIN2 = kiss_example2.exe
+#BIN1 = example1.exe
+#BIN2 = example2.exe
 
 ### 64 bit Windows
 
@@ -30,8 +30,8 @@ C = gcc
 -IC:\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include \
 -IC:\SDL2_image-2.0.3\x86_64-w64-mingw32\include \
 -Wall -c -std=c89
-#BIN1 = kiss_example1.exe
-#BIN2 = kiss_example2.exe
+#BIN1 = example1.exe
+#BIN2 = example2.exe
 
 ### macOS
 
@@ -40,42 +40,42 @@ C = gcc
 -I/Library/Frameworks/SDL2_ttf.framework/Headers \
 -I/Library/Frameworks/SDL2_image.framework/Headers \
 -Wall -c -std=c89
-#BIN1 = kiss_example1
-#BIN2 = kiss_example2
+#BIN1 = example1
+#BIN2 = example2
 
 ### Linux
 
 LDFLAGS = -lSDL2 -lSDL2_image -lSDL2_ttf
 CFLAGS = -Wall -c -std=c89
-BIN1 = kiss_example1
-BIN2 = kiss_example2
+BIN1 = example1
+BIN2 = example2
 
 all: $(BIN1) $(BIN2)
 
-$(BIN1): kiss_example1.o kiss_widgets.o kiss_draw.o kiss_general.o \
-kiss_posix.o
+$(BIN1): example1.o widgets.o draw.o general.o \
+posix.o
 	$(C) $^ $(LDFLAGS) -o $@
 
-$(BIN2): kiss_example2.o kiss_widgets.o kiss_draw.o kiss_general.o \
-kiss_posix.o
+$(BIN2): example2.o widgets.o draw.o general.o \
+posix.o
 	$(C) $^ $(LDFLAGS) -o $@
 
-kiss_example1.o: kiss_example1.c
+example1.o: example1.c
 	$(C) $(CFLAGS) $^ -o $@
 
-kiss_example2.o: kiss_example2.c
+example2.o: example2.c
 	$(C) $(CFLAGS) $^ -o $@
 
-kiss_widgets.o: kiss_widgets.c
+widgets.o: widgets.c
 	$(C) $(CFLAGS) $^ -o $@
 
-kiss_draw.o: kiss_draw.c
+draw.o: draw.c
 	$(C) $(CFLAGS) $^ -o $@
 
-kiss_general.o: kiss_general.c
+general.o: general.c
 	$(C) $(CFLAGS) $^ -o $@
 
-kiss_posix.o: kiss_posix.c
+posix.o: posix.c
 	$(C) $(CFLAGS) $^ -o $@
 
 clean:

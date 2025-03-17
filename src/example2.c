@@ -22,7 +22,7 @@
   kiss_sdl version 1.2.0
 */
 
-#include "kiss_sdl.h"
+#include "kiss.h"
 
 static struct {
 	char name[KISS_MAX_LENGTH];

@@ -19,8 +19,8 @@
   kiss_sdl version 1.2.0
 */
 
-#ifndef _kiss_sdl_h
-#define _kiss_sdl_h
+#ifndef _kiss_h
+#define _kiss_h
 
 #ifndef RESDIR
 #define RESDIR ""
@@ -366,5 +366,5 @@ int kiss_combobox_draw(kiss_combobox *combobox, SDL_Renderer *renderer);
 }
 #endif
 
-#endif /* _kiss_sdl_h */
+#endif /* _kiss_h */
 
