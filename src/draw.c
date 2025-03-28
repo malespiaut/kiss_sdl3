@@ -199,19 +199,19 @@ SDL_Renderer* kiss_init(char* title, kiss_array *a, int w, int h)
 		kiss_textfont_size);
 	r += kiss_font_new(&kiss_buttonfont, "font.ttf", a,
 		kiss_buttonfont_size);
-	r += kiss_image_new(&kiss_normal, "normal.png", a, renderer);
-	r += kiss_image_new(&kiss_prelight, "prelight.png", a, renderer);
-	r += kiss_image_new(&kiss_active, "active.png", a, renderer);
-	r += kiss_image_new(&kiss_bar, "bar.png", a, renderer);
-	r += kiss_image_new(&kiss_vslider, "vslider.png", a, renderer);
-	r += kiss_image_new(&kiss_hslider, "hslider.png", a, renderer);
-	r += kiss_image_new(&kiss_up, "up.png", a, renderer);
-	r += kiss_image_new(&kiss_down, "down.png", a, renderer);
-	r += kiss_image_new(&kiss_left, "left.png", a, renderer);
-	r += kiss_image_new(&kiss_right, "right.png", a, renderer);
-	r += kiss_image_new(&kiss_combo, "combo.png", a, renderer);
-	r += kiss_image_new(&kiss_selected, "selected.png", a, renderer);
-	r += kiss_image_new(&kiss_unselected, "unselected.png", a,
+	r += kiss_image_new(&kiss_normal, "normal.bmp", a, renderer);
+	r += kiss_image_new(&kiss_prelight, "prelight.bmp", a, renderer);
+	r += kiss_image_new(&kiss_active, "active.bmp", a, renderer);
+	r += kiss_image_new(&kiss_bar, "bar.bmp", a, renderer);
+	r += kiss_image_new(&kiss_vslider, "vslider.bmp", a, renderer);
+	r += kiss_image_new(&kiss_hslider, "hslider.bmp", a, renderer);
+	r += kiss_image_new(&kiss_up, "up.bmp", a, renderer);
+	r += kiss_image_new(&kiss_down, "down.bmp", a, renderer);
+	r += kiss_image_new(&kiss_left, "left.bmp", a, renderer);
+	r += kiss_image_new(&kiss_right, "right.bmp", a, renderer);
+	r += kiss_image_new(&kiss_combo, "combo.bmp", a, renderer);
+	r += kiss_image_new(&kiss_selected, "selected.bmp", a, renderer);
+	r += kiss_image_new(&kiss_unselected, "unselected.bmp", a,
 		renderer);
 	if (r) {
 		kiss_clean(a);
