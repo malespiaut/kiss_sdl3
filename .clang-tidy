@@ -1,0 +1,8 @@
+Checks:          '-*,readability-braces-around-statements,bugprone-uninitialized-variables'
+CheckOptions:
+  - key:           readability-braces-around-statements.CheckSingleLine
+    value:         'true'
+  - key:           bugprone-uninitialized-variables.IncludeMacros
+    value:         'true'
+  - key:           cppcoreguidelines-init-variables
+    value:         'true'
